@@ -42,7 +42,16 @@ body {
   position: absolute;
   top: 20px;
   right: 120px;
-  z-index: 1;
+  z-index: 0;
+}
+
+.img-all {
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  top: 20px;
+  right: 120px;
+  z-index: 0;
 }
 
 .search-div {
@@ -80,6 +89,7 @@ body {
   color: #fff;
   margin-top: 40px;
   margin-left: 40px;
+  z-index: 444;
 }
 
 .main-inform>h3 {
@@ -105,4 +115,22 @@ body {
 
 .humidity h3 {
   font-weight: 400;
+}
+
+.sun-icon {
+  margin-left: 10px;
+  position: absolute;
+}
+
+.sun-hide {
+  display: none !important;
+}
+
+.sun2-hide {
+  display: none !important;
+}
+
+.sun2-hide::before {
+  display: none;
+  overflow: hidden;
 }
