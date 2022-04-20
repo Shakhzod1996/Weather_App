@@ -29,7 +29,7 @@ let sunBox = ["<i class='bx bx-sun' ></i>","<i class='bx bxs-moon'></i>", "<i cl
 function weatherUpdate(data) {
   mainContainer.innerHTML += `
   <div class="main-inform">
-  <h3>Uzbekistan, ${data.name}</h3>
+  <h3>${data.country}, ${data.name}</h3>
   <h3>${data.main.temp.toFixed(0)} ℃</h3>
   <div class="sunny-flex">
     <h3>${data.weather[0].description} </h3>
