@@ -134,3 +134,10 @@ body {
   display: none;
   overflow: hidden;
 }
+
+.host {
+  position: fixed;
+  bottom: 50px;
+  left: center;
+  transform: translate(-50%);
+}
