@@ -49,14 +49,14 @@ body {
   z-index: 0;
 }
 
-.img-all {
+/* .img-all {
   width: 350px;
   height: 350px;
   position: absolute;
   top: 20px;
   right: 120px;
   z-index: 0;
-}
+} */
 
 .search-div {
   margin: auto;
@@ -203,17 +203,15 @@ iframe {
   }
 
   .map {
-    left: 0;
-    bottom: 10%;
-    right: 0;
-    /* transform: translate(-50%, -10%); */
+    position: relative;
+    margin-top: 40px;
     width: 100%;
     height: 300px;
-    border-radius: 0;
     padding: 10px;
   }
 
   iframe {
     border-radius: 0;
   }
+
 }

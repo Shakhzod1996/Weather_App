@@ -41,7 +41,7 @@ function weatherUpdate(data) {
   <h3>${data.sys.country}, ${data.name}</h3>
   <h3>${data.main.temp.toFixed(0)} ℃</h3>
   <div class="sunny-flex">
-    <h3>${data.weather[0].description} </h3>
+    <h3>${data.weather[0].main} </h3>
     <i class='bx bx-sun'></i>
   </div>
 
@@ -59,42 +59,42 @@ let sunIcon = document.querySelector(".sun-icon");
 let sunBoxHTML = document.querySelector(".sun-small-box");
 console.log(sunIcon);
 function sunMoonChange(data) {
-  if (data.weather[0].description == "broken clouds") {
+  if (data.weather[0].main == "Clear") {
     sun1.classList.add('sun-hide');
     divImg.innerHTML = `
-      <img class='img-all' src="${imgs[1]}" alt="img">
+      <img class='img-all sun' src="${imgs[0]}" alt="img">
       `;
-    container.style.backgroundImage = 'linear-gradient(-125deg, #712B75, rgba(255, 255, 255, 0.491))'
-  } else if (data.weather[0].description == "few clouds") {
+    container.style.backgroundImage = 'linear-gradient(-125deg, #77d3fd, rgba(255, 255, 255, 0.491))'
+  } else if (data.weather[0].main == "Mist") {
     divImg.innerHTML = `
-      <img class='img-all' src="${imgs[1]}" alt="img">
+      <img class='img-all sun' src="${imgs[1]}" alt="img">
       `;
     container.style.backgroundImage = 'linear-gradient(-125deg, #712B75, rgba(255, 255, 255, 0.491))'
     sunIcon.classList.add('sun-hide')
-  } else if (data.weather[0].description == "overcast clouds") {
+  } else if (data.weather[0].main == "Rain") {
     divImg.innerHTML = `
-      <img class='img-all' src="${imgs[3]}" alt="img">
+      <img class='img-all sun' src="${imgs[2]}" alt="img">
       `;
       container.style.backgroundImage = 'linear-gradient(-125deg, #6BA7CC, rgba(255, 255, 255, 0.491))'
       sunIcon.classList.add('sun-hide')
     
-  } else if (data.weather[0].description == "clear sky") {
+  } else if (data.weather[0].main == "Clouds") {
     divImg.innerHTML = `
-      <img class='img-all' src="${imgs[0]}" alt="img">
+      <img class='img-all sun' src="${imgs[1]}" alt="img">
       
       `;
-      container.style.backgroundImage = 'linear-gradient(-125deg, #77d3fd, rgba(255, 255, 255, 0.491))'
-  } else if (data.weather[0].description == "scattered clouds") {
+      container.style.backgroundImage = 'linear-gradient(-125deg, #712B75, rgba(255, 255, 255, 0.491))'
+  } else if (data.weather[0].main == "Snow") {
     divImg.innerHTML = `
-      <img class='img-all' src="${imgs[3]}" alt="img">
+      <img class='img-all sun' src="${imgs[3]}" alt="img">
       `;
-    container.style.backgroundImage = 'linear-gradient(-125deg, #6BA7CC, rgba(255, 255, 255, 0.491))'
+    container.style.backgroundImage = 'linear-gradient(-125deg, #712B75, rgba(255, 255, 255, 0.491))'
     sunIcon.classList.add('sun-hide')
     
     
-  } else if (data.weather[0].description == "moderate rain") {
+  } else if (data.weather[0].main == "Smoke") {
     divImg.innerHTML = `
-      <img class='img-all' src="${imgs[2]}" alt="img">
+      <img class='img-all sun' src="${imgs[1]}" alt="img">
       `;
     container.style.backgroundImage = 'linear-gradient(-125deg, #A8AAC4, rgba(255, 255, 255, 0.491))'
     sunIcon.classList.add('sun-hide')
