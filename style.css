@@ -160,3 +160,60 @@ iframe {
   border-bottom-right-radius: 60px;
 
 }
+
+@media(max-width: 500px) {
+  .div-search-main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #42C2FF;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .search-div {
+    margin-top: 0;
+    width: 80%;
+    padding: 0;
+  }
+
+  .div-img {
+    right: -10px;
+    top: 80px;
+    transform: translateX(-50%);
+  }
+
+  .sun {
+    width: 100px;
+    height: 100px;
+  }
+
+  .main-inform h3 {
+    font-size: 22px;
+  }
+
+  .main-content {
+    min-height: 100vh;
+    margin-top: 180px;
+    width: 100%;
+  }
+
+  .map {
+    left: 0;
+    bottom: 10%;
+    right: 0;
+    /* transform: translate(-50%, -10%); */
+    width: 100%;
+    height: 300px;
+    border-radius: 0;
+    padding: 10px;
+  }
+
+  iframe {
+    border-radius: 0;
+  }
+}
