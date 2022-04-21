@@ -14,8 +14,17 @@ form.addEventListener("submit", (e) => {
     .then((data) => {
       weatherUpdate(data);
       sunMoonChange(data);
+      mapFunc(data)
     });
 });
+
+function mapFunc(data) {
+  let mapEl = document.querySelector('.map')
+  console.log(data)
+  mapEl.innerHTML = `
+  <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d196633.9052025619!2d${data.coord.lon}!3d${data.coord.lat}!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1650527382022!5m2!1sru!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  ` 
+}
 
 let imgs = [
   "../../img/sun.png",
@@ -93,3 +102,5 @@ function sunMoonChange(data) {
     
   }
 }
+
+
